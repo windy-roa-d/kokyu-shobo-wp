@@ -1,0 +1,17 @@
+extends include/_base.pug
+block head-description
+  meta(name="description" content="SAYAKA Kawashima's WEB Portfolio.")
+block css-link
+  link(rel="stylesheet" href="./css/style.css")
+
+block prepend body
+  div#wrapper.fl.fl__cn.frontpage
+    article.contents-box
+      header.title-txt
+        div.title-txt__detail
+          h1 SAYAKA Kawashima
+          h2 MarkUP / FrontEnd Enginner.
+          h3 ...And StoryWriter, Traveller, Self Publisher!
+      nav.menu
+        ul
+          li: a(href="profile.html") Profile
