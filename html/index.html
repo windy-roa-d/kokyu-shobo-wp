@@ -3,27 +3,77 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>SAYAKA Kawashima Portfolio</title>
-    <meta name="description" content="SAYAKA Kawashima's WEB Portfolio.">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>呼吸書房｜風野湊 Official Web Site</title>
+    <meta name="description" content="旅と小説の呼吸書房です。当Webサイトでは、風野湊の創作物を掲載しています。メインコンテンツは小説、紀行文、朗読音声。書籍通販・イベント出展の案内もこちらからどうぞ。">
     <link rel="stylesheet" href="./css/style.css">
   </head>
   <body>
-    <div class="fl fl__cn frontpage" id="wrapper">
-      <article class="contents-box">
-        <header class="title-txt">
-          <div class="title-txt__detail">
-            <h1>SAYAKA Kawashima</h1>
-            <h2>MarkUP / FrontEnd Enginner.</h2>
-            <h3>...And StoryWriter, Traveller, Self Publisher!</h3>
-          </div>
-        </header>
-        <nav class="menu">
-          <ul>
-            <li><a href="profile.html">Profile</a></li>
+    <div class="home">
+      <header>
+        <h1>呼吸書房</h1>
+        <nav>
+          <ul class="navList__main">
+            <li><a href="#">此処について</a></li>
+            <li><a href="#">ブログ</a></li>
+            <li><a href="#">メール</a></li>
+          </ul>
+          <ul class="navList__sns">
+            <li><a href="#">Twitter</a></li>
+          </ul>
+          <ul class="navList__contents">
+            <li><a href="#">小説</a></li>
+            <li><a href="#">紀行文</a></li>
+            <li><a href="#">詩と朗読</a></li>
+            <li><a href="#">書籍販売</a></li>
           </ul>
         </nav>
+        <div>
+          <p>News</p>
+        </div>
+      </header>
+      <!-- /header-->
+      <div class="fillPageContents home__MainList">
+        <ul class="contentsList">
+          <li><a href="#">小説</a></li>
+          <li><a href="#">紀行文</a></li>
+          <li><a href="#">詩と朗読</a></li>
+          <li><a href="#">書籍販売</a></li>
+        </ul>
+        <p>物語と旅人は同じ国に住んでいる</p>
+      </div>
+      <article class="fillPageContents home__RandomPickUp">
+        <h2>不在は悲しみではない。</h2>
+        <p>千年の昔から聳え続けていた眠り姫の茨の城が、過日の地震でとうとう崩壊したので、僕らの国は空前の観光ブームに見舞われていた。</p>
+        <p>近隣諸国からの純朴な観光客はもちろん、歴史学者、民俗学者、考古学者、魔法学者、各国首脳、各国王家の末裔、どこぞのお忍びの王女様までが、現在に息づくお伽噺の化石を見ようと詰めかけた。半ば遺跡と化していた古城の近くにあったのは小さな村が一つきりで、宿泊施設はあっという間にパンクし、草原には臨時のテント村がどこまでも続いた。村は一週間で十年分の生活費を手に入れた。</p>
+        <p>観光客は城の外観を眺め、損傷が軽度な廊下をぞろぞろ歩き、千年前の歴史と逸話を聞けば満足して帰ってゆく。テント村には臨時の土産物屋が軒を連ね、日を追うごとにその数は増え</p>
       </article>
+      <!-- /ランダムピックアップ（PHP）-->
+      <article class="fillPageContents home__Introduction">
+        <section>
+          <h2>About & Greeting</h2>
+          <p>呼吸書房へようこそ。<br>此処は、路上に置かれた本棚のようなもの。 私、風野湊による、小説・詩・紀行文をお読みいただけます。 旅先の写真や音楽、そして朗読音声もほんの少し。 どうぞごゆっくりとお楽しみください。<br>書斎と書店、ふたつの意味を持つ「書房」の名のとおり、一部の作品は書籍化し、販売を行っています。 なお、出展イベントや委託販売先でもお買い求めいただけます。</p>
+        </section>
+        <div>
+          <section>
+            <h3>Contact</h3>
+            <p>感想、誤字報告、ご依頼などお気軽にどうぞ。</p>
+          </section>
+          <section>
+            <h3>profile</h3>
+            <h4>風野 湊（かざの みなと）</h4>
+            <p>1990年4月生。旅先で猫を愛でつつ読書に耽れたら幸福。<br>バックパックにかならず詰めるのは、宮沢賢治詩集、長田弘紀行文、P.ロスファス『風の名前』、ポメラDM20。<br>書きつづけています。</p>
+            <ul>
+              <li><a href="#">ブログ</a></li>
+              <li><a href="#">読書メーター</a></li>
+              <li><a href="#">即興小説</a></li>
+            </ul>
+          </section>
+        </div>
+      </article>
+      <!-- /ここについて-->
+      <footer class="class">
+        <p class="cr"><small>※当サイト上コンテンツの無断転載はご遠慮ください。<br>Copyright &copy;&nbsp;<a href="xxx">呼吸書房</a>&nbsp; All Rights Reserved.</small></p>
+      </footer>
     </div>
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
     <script src="/js/common.js"></script>

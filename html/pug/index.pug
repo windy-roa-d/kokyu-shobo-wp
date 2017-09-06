@@ -1,17 +1,56 @@
 extends include/_base.pug
 block head-description
-  meta(name="description" content="SAYAKA Kawashima's WEB Portfolio.")
+  meta(name="description" content="旅と小説の呼吸書房です。当Webサイトでは、風野湊の創作物を掲載しています。メインコンテンツは小説、紀行文、朗読音声。書籍通販・イベント出展の案内もこちらからどうぞ。")
 block css-link
   link(rel="stylesheet" href="./css/style.css")
 
 block prepend body
-  div#wrapper.fl.fl__cn.frontpage
-    article.contents-box
-      header.title-txt
-        div.title-txt__detail
-          h1 SAYAKA Kawashima
-          h2 MarkUP / FrontEnd Enginner.
-          h3 ...And StoryWriter, Traveller, Self Publisher!
-      nav.menu
-        ul
-          li: a(href="profile.html") Profile
+  div.home
+    include include/_header.pug
+    
+    div.fillPageContents.home__MainList
+      ul.contentsList
+        li: a(href="#") 小説
+        li: a(href="#") 紀行文
+        li: a(href="#") 詩と朗読
+        li: a(href="#") 書籍販売
+      p 物語と旅人は同じ国に住んでいる
+
+    article.fillPageContents.home__RandomPickUp
+      h2 不在は悲しみではない。
+      p 千年の昔から聳え続けていた眠り姫の茨の城が、過日の地震でとうとう崩壊したので、僕らの国は空前の観光ブームに見舞われていた。
+      p 近隣諸国からの純朴な観光客はもちろん、歴史学者、民俗学者、考古学者、魔法学者、各国首脳、各国王家の末裔、どこぞのお忍びの王女様までが、現在に息づくお伽噺の化石を見ようと詰めかけた。半ば遺跡と化していた古城の近くにあったのは小さな村が一つきりで、宿泊施設はあっという間にパンクし、草原には臨時のテント村がどこまでも続いた。村は一週間で十年分の生活費を手に入れた。
+      p 観光客は城の外観を眺め、損傷が軽度な廊下をぞろぞろ歩き、千年前の歴史と逸話を聞けば満足して帰ってゆく。テント村には臨時の土産物屋が軒を連ね、日を追うごとにその数は増え
+    // /ランダムピックアップ（PHP）
+
+    article.fillPageContents.home__Introduction
+      section
+        h2 About & Greeting
+        p
+          |呼吸書房へようこそ。
+          br
+          |此処は、路上に置かれた本棚のようなもの。 私、風野湊による、小説・詩・紀行文をお読みいただけます。 旅先の写真や音楽、そして朗読音声もほんの少し。 どうぞごゆっくりとお楽しみください。
+          br
+          |書斎と書店、ふたつの意味を持つ「書房」の名のとおり、一部の作品は書籍化し、販売を行っています。 なお、出展イベントや委託販売先でもお買い求めいただけます。
+
+      div
+        section
+          h3 Contact
+          p 感想、誤字報告、ご依頼などお気軽にどうぞ。
+        section
+          h3 profile
+          h4 風野 湊（かざの みなと）
+          p
+            |1990年4月生。旅先で猫を愛でつつ読書に耽れたら幸福。
+            br
+            |バックパックにかならず詰めるのは、宮沢賢治詩集、長田弘紀行文、P.ロスファス『風の名前』、ポメラDM20。
+            br
+            |書きつづけています。
+          ul
+            li: a(href="#") ブログ
+            li: a(href="#") 読書メーター
+            li: a(href="#") 即興小説
+
+    // /ここについて
+
+    include include/_footer.pug

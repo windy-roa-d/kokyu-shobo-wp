@@ -26,6 +26,23 @@ $bp-sp: 764px;
   }
 }
 
+//変数
+$baseColor: white;
+
+//MixIn
+@mixin flexDefault(){
+  display: flex;
+  flex-wrap: wrap;
+}
+@mixin flexNoWrap(){
+  display: flex;
+  flex-wrap: nowrap;
+}
+@mixin flexCentering(){
+  justify-content: center;
+  align-items: center;
+}
+
 /* HEADER FRONT & SUB-PAGE
 ------------------------------------------*/
 #wrapper{
@@ -41,8 +58,16 @@ $bp-sp: 764px;
     align-items: center;
   }
 }
+//Sassのincludeでflexをどうこうする
 
-//全ページ共通部分
+//Common Rayout
+header{
+  
+}
+footer{
+  width: 100%;
+  text-align: center;
+}
 .title-txt{
   &__detail{
     h1{
@@ -65,196 +90,31 @@ $bp-sp: 764px;
     }
   }
 }
-.menu{
-  text-align: right;
-  ul{
-  }
-  li{
-    display: inline;
-    font-size: 32px;
-    font-weight: bold;
-    @include media(tablet) {
-      font-size: 3.5vw;
-    }
-  }
-  li+li{
-    margin-left: 2vw;
-  }
+.fillPageContents{
+  width: 100%;
+  height: auto;
+  min-height: 100vh;
 }
 
-//frontpage
-.frontpage{
-  height: 100vh;
-  .contents-box{
-    width: 75vw;
-    height: 50vw;
-    max-width: 675px;
-    max-height: 450px;
-    border: 1px solid #333;
-  }
-  .title-txt{
-    height: 50%;
-    position: relative;
-    &__detail{
-      position: absolute;
-      top: 5vw;
-      left: 6vw;
-    }
-  }
-  .menu{
-    height: 50%;
-    text-align: right;
-    position: relative;
-    ul{
-      position: absolute;
-      bottom: 5vw;
-      right: 6vw;
-    }
-  }
-}
-
-//Subpage
-.subpage{
-  .contents-box{
-  }
-  .title-txt{
-    width: 100%;
-    &__detail{
-      margin: 5vw;
-      text-align: center;
-      color: dodgerblue;
-    }
-  }
-  .menu{
+//TOP Page
+.home{
+  header{
     position: fixed;
     bottom: 0;
-    //right: 0;
-    width: 100%;
-    //background: rgba(255,255,255,0.5);
-    ul{
-      margin: 1em 3em;
-      display: flex;
-      justify-content: space-between;
-    }
-    li{
-      font-size: 24px;
-    }
   }
-  .main__detail,.sub__detail{
+  
+  &__MainList{
+    @include flexDefault();
+    @include flexCentering();
+  }
+  
+  &__RandomPickUp{
     
-    //box-sizing: border-box;
   }
-  .main__detail > *{
-    text-align: center;
+  
+  &__Introduction{
+    @include flexDefault();
+    @include flexCentering();
   }
-  .sub__detail{
-    margin: 0 auto;
-    padding: 3em 10% 0;
-    max-width: 700px;
-  }
-}
-
-//profile
-.profile-contents{
-  margin-bottom: 5%;
-  justify-content: center;
-  align-items: center;
-  .main__detail{
-    text-align: center;
-    img{
-    width: 20vw;
-    height: 20vw;
-    border-radius: 15vw;
-    }
-  }
-  .main__detail+.sub__detail{
-    width: 30vw;
-    margin: 0 0 0 3em;
-    padding: 0;
-  }
-  h1{
-    font-size: 1.5em;
-    margin-bottom: 1em;
-  }
-  h2{
-    font-size: 1.3em;
-  }
-  h3{
-    margin-top: 1em;
-  }
-}
-
-//Works
-.works-contents{
-  padding-bottom: 5%;
-  width: 75vw;
-  margin: 0 auto;
-  h1{
-    font-size: 1.2em;
-    margin-bottom: 1.5em;
-  }
-  dl{
-    dt{
-      width: 3em;
-      &:after{
-        content: "｜";
-      }
-    }
-    dd{
-      width: calc(100% - 3em);
-    }
-  }
-}
-.works-contents+.works-contents{
-  padding: 5% 0;
-  border-top: 1px solid #333;
-}
-.works-box{
-  &__pc{
-    width: 50vw;
-    margin: 0 auto;
-    padding: 12px 10px;
-    background: #999;
-    border: 1px solid darkkhaki;
-    border-spacing: 5px;
-    border-radius: 10px;
-  }
-}
-.works-image{
-  background: #ccc;
-  width: 50vw;
-  height: 27vw;
-  margin: 0 auto;
-  overflow-y: scroll;
-  img{
-    max-width: 50vw;
-    display: inherit;
-  }
-  &.fl{
-    justify-content: center;
-    align-items: center;
-  }
-  p span{
-    display: block;
-    color: #fff;
-  }
-  p .noimage-txt{
-    margin-bottom: 0.2em;
-    font-size: 2em;
-    font-weight: bold;
-  }
-}
-.works-skill{
-  li{
-    font-size: 0.8em;
-    margin: 0.3em 0.5em 0.3em 0;
-    border: 1px solid #999;
-    border-radius: 5px;
-    padding: 1px 5px;
-  }
-}
-
-footer{
-  width: 100%;
-  text-align: center;
+  
 }
